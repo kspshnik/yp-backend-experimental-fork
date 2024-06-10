@@ -17,8 +17,13 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
+    "paths": {}
   },
   "rootDir": "./src",
-  "include": ["./src/**/*"],
-  "exclude": ["./obsolete"]
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "./obsolete"
+  ]
 }

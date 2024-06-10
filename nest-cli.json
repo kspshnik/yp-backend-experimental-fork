@@ -1,8 +1,32 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src",
+  "sourceRoot": "apps/yp-facade/src",
   "compilerOptions": {
-    "deleteOutDir": true
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/yp-facade/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/yp-facade",
+  "projects": {
+    "yp-facade": {
+      "type": "application",
+      "root": "apps/yp-facade",
+      "entryFile": "main",
+      "sourceRoot": "apps/yp-facade/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/yp-facade/tsconfig.app.json"
+      }
+    },
+    "yp-blob-service": {
+      "type": "application",
+      "root": "apps/yp-blob-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/yp-blob-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/yp-blob-service/tsconfig.app.json"
+      }
+    }
   }
 }
