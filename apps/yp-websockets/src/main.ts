@@ -1,9 +1,9 @@
 import { NestFactory } from '@nestjs/core';
 import { MicroserviceOptions, Transport } from '@nestjs/microservices';
-import { YpBlobServiceModule } from './yp-blob-service.module';
+import { YpWebsocketsModule } from './yp-websockets.module';
 
 async function bootstrap() {
-  const app = await NestFactory.createMicroservice<MicroserviceOptions>(YpBlobServiceModule, {
+  const app = await NestFactory.createMicroservice<MicroserviceOptions>(YpWebsocketsModule, {
     transport: Transport.REDIS,
   });
 }

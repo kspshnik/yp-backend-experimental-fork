@@ -20,12 +20,21 @@
       }
     },
     "yp-blob-service": {
-      "type": "application",
+      "type": "microservice",
       "root": "apps/yp-blob-service",
       "entryFile": "main",
       "sourceRoot": "apps/yp-blob-service/src",
       "compilerOptions": {
         "tsConfigPath": "apps/yp-blob-service/tsconfig.app.json"
+      }
+    },
+    "yp-websockets": {
+      "type": "microservice",
+      "root": "apps/yp-websockets",
+      "entryFile": "main",
+      "sourceRoot": "apps/yp-websockets/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/yp-websockets/tsconfig.app.json"
       }
     }
   }

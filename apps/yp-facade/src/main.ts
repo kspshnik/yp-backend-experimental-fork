@@ -20,7 +20,9 @@ async function bootstrap() {
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('/docs/api/actual', app, document);
-
+  // await app.connectMicroservice() - для файлов
+  // await app.connectMicroservice() - для WS
+  // await app.startAllMicroservices() - стартанём все
   await app.listen(configuration().server.port);
 
   console.info(`running on: ${await app.getUrl()}`);
